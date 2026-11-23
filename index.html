@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Store — Ultra Premium Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <svg class="apple-svg preloader-logo" viewBox="0 0 170 170" fill="currentColor">
+        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.13-1.9-14.34-6.08-3.69-3.03-7.61-7.82-11.77-14.37-5.02-7.88-9.16-17.02-12.42-27.42-3.26-10.4-4.89-20.17-4.89-29.3 0-10.59 2.63-19.34 7.89-26.25 5.26-6.91 11.86-10.47 19.8-10.68 4.48 0 9.65 1.37 15.52 4.11 5.87 2.74 9.65 4.14 11.34 4.2 1.34 0 5.45-1.62 12.33-4.86 6.88-3.24 12.69-4.66 17.43-4.26 12.92 1.04 22.64 6.14 29.16 15.3-11.55 7.01-17.24 16.82-17.07 29.43.17 9.83 3.79 18.02 10.86 24.57 4.86 4.53 10.44 7.51 16.74 8.94-1.35 4.11-2.81 8.08-4.38 11.91zM119.22 32.14c0 7.75-2.87 14.98-8.61 21.69-6.93 8.06-15.32 12.71-24.42 11.97-.11-.94-.17-1.95-.17-3.03 0-7.44 3.24-15.4 9.05-21.95 2.84-3.21 6.45-5.88 10.83-8.01 4.38-2.13 8.51-3.32 12.39-3.57.29 1.65.43 2.61.43 2.9z"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Smooth Page Transition Overlay -->
+  <div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+  <!-- Sticky Glassmorphism Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <button id="mobileMenuBtn" class="nav-icon-btn mobile-only" aria-label="Menyuni ochish" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="#hero" class="nav-logo" data-nav="hero" aria-label="Apple Bosh sahifa">
+        <svg class="apple-svg" viewBox="0 0 170 170" fill="currentColor" width="18" height="22">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.13-1.9-14.34-6.08-3.69-3.03-7.61-7.82-11.77-14.37-5.02-7.88-9.16-17.02-12.42-27.42-3.26-10.4-4.89-20.17-4.89-29.3 0-10.59 2.63-19.34 7.89-26.25 5.26-6.91 11.86-10.47 19.8-10.68 4.48 0 9.65 1.37 15.52 4.11 5.87 2.74 9.65 4.14 11.34 4.2 1.34 0 5.45-1.62 12.33-4.86 6.88-3.24 12.69-4.66 17.43-4.26 12.92 1.04 22.64 6.14 29.16 15.3-11.55 7.01-17.24 16.82-17.07 29.43.17 9.83 3.79 18.02 10.86 24.57 4.86 4.53 10.44 7.51 16.74 8.94-1.35 4.11-2.81 8.08-4.38 11.91zM119.22 32.14c0 7.75-2.87 14.98-8.61 21.69-6.93 8.06-15.32 12.71-24.42 11.97-.11-.94-.17-1.95-.17-3.03 0-7.44 3.24-15.4 9.05-21.95 2.84-3.21 6.45-5.88 10.83-8.01 4.38-2.13 8.51-3.32 12.39-3.57.29 1.65.43 2.61.43 2.9z"/>
+        </svg>
+      </a>
+
+      <nav class="nav-links" aria-label="Asosiy menyu">
+        <a href="#store-overview" class="nav-link" data-nav="store-overview">Store</a>
+        <a href="#mac-section" class="nav-link" data-nav="mac-section">Mac</a>
+        <a href="#ipad-section" class="nav-link" data-nav="ipad-section">iPad</a>
+        <a href="#iphone-section" class="nav-link" data-nav="iphone-section">iPhone</a>
+        <a href="#watch-section" class="nav-link" data-nav="watch-section">Watch</a>
+        <a href="#airpods-section" class="nav-link" data-nav="airpods-section">AirPods</a>
+        <a href="#accessories-section" class="nav-link" data-nav="accessories-section">Accessories</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="searchToggleBtn" class="nav-icon-btn" aria-label="Qidiruv">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button id="cartToggleBtn" class="nav-icon-btn cart-btn" aria-label="Savatcha">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span id="cartBadge" class="cart-badge">0</span>
+        </button>
+
+        <button id="authToggleBtn" class="nav-auth-btn" aria-label="Kirish yoki ro'yxatdan o'tish">
+          <span id="authBtnLabel">Login</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <a href="#store-overview" class="mobile-nav-link" data-nav="store-overview">Store</a>
+      <a href="#mac-section" class="mobile-nav-link" data-nav="mac-section">Mac</a>
+      <a href="#ipad-section" class="mobile-nav-link" data-nav="ipad-section">iPad</a>
+      <a href="#iphone-section" class="mobile-nav-link" data-nav="iphone-section">iPhone</a>
+      <a href="#watch-section" class="mobile-nav-link" data-nav="watch-section">Watch</a>
+      <a href="#airpods-section" class="mobile-nav-link" data-nav="airpods-section">AirPods</a>
+      <a href="#accessories-section" class="mobile-nav-link" data-nav="accessories-section">Accessories</a>
+    </div>
+  </header>
+
+  <!-- Inline Search Bar Overlay -->
+  <div id="searchBarPanel" class="search-panel" aria-hidden="true">
+    <div class="search-panel-inner">
+      <div class="search-input-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="iPhone 17, MacBook Pro, AirPods Pro, iPad Pro yoki aksessuar qidiring..."
+          autocomplete="off"
+        />
+        <button id="clearSearchBtn" class="search-clear-btn" aria-label="Tozalash" hidden>&times;</button>
+        <button id="closeSearchBtn" class="search-close-btn" aria-label="Qidiruvni yopish">Yopish</button>
+      </div>
+
+      <div id="searchResultsArea" class="search-results-area">
+        <div class="search-hints">
+          <span>Mashhur qidiruvlar:</span>
+          <button class="hint-chip" data-query="iPhone 17">iPhone 17</button>
+          <button class="hint-chip" data-query="MacBook Pro">MacBook Pro</button>
+          <button class="hint-chip" data-query="AirPods Pro">AirPods Pro</button>
+          <button class="hint-chip" data-query="iPad Pro">iPad Pro</button>
+          <button class="hint-chip" data-query="Apple Watch Ultra">Apple Watch Ultra</button>
+        </div>
+        <div id="searchResultsGrid" class="search-results-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="mainContent">
+    <!-- 3. HOME HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-gradient-bg"></div>
+      <div class="hero-content" data-parallax="0.16">
+        <span class="hero-eyebrow reveal-fade">Yangi avlod flagmani</span>
+        <h1 class="hero-title reveal-up">iPhone 17 Pro Max</h1>
+        <p class="hero-subtitle reveal-up">
+          Titan korpus, A19 Pro ultra-samarador chip va professional kamera tizimi — kelajak qo‘lingizda.
+        </p>
+        <div class="hero-cta-group reveal-up">
+          <button id="heroBuyBtn" class="btn btn-primary btn-lg" data-product-id="iphone-17-pro-max">
+            Buy Now
+          </button>
+          <button id="heroLearnBtn" class="btn btn-outline btn-lg" data-product-id="iphone-17-pro-max">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-parallax="-0.12">
+        <div class="hero-device-card tilt-card">
+          <img
+            id="heroProductImg"
+            src="https://www.apple.com/v/iphone-17-pro/a/images/overview/welcome/hero__b0sc7k47n0eq_large.jpg"
+            alt="iPhone 17 Pro Max"
+            class="hero-img"
+            onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpG0GLhd4AbRKZiodjTELO_tfprgx7CWaNMsiOlENW6w&s'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Store Overview Strip -->
+    <section id="store-overview" class="store-strip-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2 class="section-title">The latest. <span class="muted">Take a look at what’s new, right now.</span></h2>
+          <p class="section-subtitle">Har bir qurilmani o‘zingizga mos rang, xotira, chip va konfiguratsiyada sozlang.</p>
+        </div>
+        <div id="categoryStripGrid" class="category-strip-grid"></div>
+      </div>
+    </section>
+
+    <!-- 4. IPHONE SECTION -->
+    <section id="iphone-section" class="catalog-section bg-light">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">iPhone</span>
+          <h2 class="section-title">Designed to be loved.</h2>
+          <p class="section-subtitle">
+            iPhone 17 Pro Max’dan iPhone 14 gacha — xotira va rangni tanlang, narx darhol yangilanadi.
+          </p>
+        </div>
+        <div id="iphoneGrid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- 5. MACBOOK SECTION -->
+    <section id="mac-section" class="catalog-section bg-white">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">MacBook</span>
+          <h2 class="section-title">Supercharged by Apple silicon.</h2>
+          <p class="section-subtitle">
+            MacBook Air va MacBook Pro modellarida Chip, RAM, SSD va rangni sozlab, real vaqtdagi narxni ko‘ring.
+          </p>
+        </div>
+        <div id="macGrid" class="products-grid products-grid-2"></div>
+      </div>
+    </section>
+
+    <!-- 6. IPAD SECTION -->
+    <section id="ipad-section" class="catalog-section bg-light">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">iPad</span>
+          <h2 class="section-title">Lovable. Drawable. Magical.</h2>
+          <p class="section-subtitle">
+            iPad Pro, iPad Air, iPad va iPad mini — ekran o‘lchami, xotira, Wi-Fi / Cellular va rangni tanlang.
+          </p>
+        </div>
+        <div id="ipadGrid" class="products-grid products-grid-2"></div>
+      </div>
+    </section>
+
+    <!-- 7. APPLE WATCH SECTION -->
+    <section id="watch-section" class="catalog-section bg-white">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Apple Watch</span>
+          <h2 class="section-title">To wear it is to love it.</h2>
+          <p class="section-subtitle">
+            Apple Watch Ultra, Series va SE — korpus rangi, o‘lchami, tasma (band) va GPS / Cellular variantlari.
+          </p>
+        </div>
+        <div id="watchGrid" class="products-grid products-grid-3"></div>
+      </div>
+    </section>
+
+    <!-- 8. AIRPODS SECTION -->
+    <section id="airpods-section" class="catalog-section bg-light">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">AirPods</span>
+          <h2 class="section-title">Sound that surrounds you.</h2>
+          <p class="section-subtitle">
+            AirPods 4, AirPods 4 with ANC, AirPods Pro va AirPods Max — kristall toza ovoz va faol shovqinni bostirish.
+          </p>
+        </div>
+        <div id="airpodsGrid" class="products-grid products-grid-2"></div>
+      </div>
+    </section>
+
+    <!-- 9. ACCESSORIES SECTION -->
+    <section id="accessories-section" class="catalog-section bg-white">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Accessories</span>
+          <h2 class="section-title">Essential pairings.</h2>
+          <p class="section-subtitle">
+            Apple Pencil, Magic Mouse, Magic Keyboard, Magic Trackpad, MagSafe Charger, USB-C Adapter va iPhone Case.
+          </p>
+        </div>
+        <div id="accessoriesGrid" class="products-grid products-grid-4"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 16. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Apple">
+            <svg class="apple-svg" viewBox="0 0 170 170" fill="currentColor" width="20" height="24">
+              <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.13-1.9-14.34-6.08-3.69-3.03-7.61-7.82-11.77-14.37-5.02-7.88-9.16-17.02-12.42-27.42-3.26-10.4-4.89-20.17-4.89-29.3 0-10.59 2.63-19.34 7.89-26.25 5.26-6.91 11.86-10.47 19.8-10.68 4.48 0 9.65 1.37 15.52 4.11 5.87 2.74 9.65 4.14 11.34 4.2 1.34 0 5.45-1.62 12.33-4.86 6.88-3.24 12.69-4.66 17.43-4.26 12.92 1.04 22.64 6.14 29.16 15.3-11.55 7.01-17.24 16.82-17.07 29.43.17 9.83 3.79 18.02 10.86 24.57 4.86 4.53 10.44 7.51 16.74 8.94-1.35 4.11-2.81 8.08-4.38 11.91zM119.22 32.14c0 7.75-2.87 14.98-8.61 21.69-6.93 8.06-15.32 12.71-24.42 11.97-.11-.94-.17-1.95-.17-3.03 0-7.44 3.24-15.4 9.05-21.95 2.84-3.21 6.45-5.88 10.83-8.01 4.38-2.13 8.51-3.32 12.39-3.57.29 1.65.43 2.61.43 2.9z"/>
+            </svg>
+          </a>
+          <p class="footer-note">
+            Namoyish uchun yaratilgan ultra-premium Apple Store interfeysi. Narxlar va konfiguratsiyalar demo maqsadida keltirilgan.
+          </p>
+        </div>
+
+        <div class="social-links" aria-label="Ijtimoiy tarmoqlar">
+          <a href="#hero" class="social-btn" aria-label="Instagram" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#hero" class="social-btn" aria-label="YouTube" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+          <a href="#hero" class="social-btn" aria-label="X (Twitter)" title="X">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#hero" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Shop and Learn</h4>
+          <ul>
+            <li><a href="#store-overview">Store</a></li>
+            <li><a href="#mac-section">Mac</a></li>
+            <li><a href="#ipad-section">iPad</a></li>
+            <li><a href="#iphone-section">iPhone</a></li>
+            <li><a href="#watch-section">Watch</a></li>
+            <li><a href="#airpods-section">AirPods</a></li>
+            <li><a href="#accessories-section">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#account" class="footer-auth-trigger">Manage Your Apple Account</a></li>
+            <li><a href="#orders" class="footer-cart-trigger">Apple Store Account</a></li>
+            <li><a href="#bag" class="footer-cart-trigger">Shopping Bag</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Apple Store</h4>
+          <ul>
+            <li><a href="#store-overview">Find a Store</a></li>
+            <li><a href="#iphone-section">Genius Bar</a></li>
+            <li><a href="#mac-section">Trade In</a></li>
+            <li><a href="#ipad-section">Financing</a></li>
+            <li><a href="#accessories-section">Order Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Apple</h4>
+          <ul>
+            <li><a href="#hero">Newsroom</a></li>
+            <li><a href="#mac-section">Apple Leadership</a></li>
+            <li><a href="#store-overview">Career Opportunities</a></li>
+            <li><a href="#watch-section">Environment</a></li>
+            <li><a href="#airpods-section">Accessibility</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#iphone-section">iPhone Support</a></li>
+            <li><a href="#mac-section">Mac Support</a></li>
+            <li><a href="#ipad-section">iPad Support</a></li>
+            <li><a href="#watch-section">Watch Support</a></li>
+            <li><a href="#airpods-section">AirPods Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 Apple Inc. Barcha huquqlar himoyalangan.</p>
+        <div class="footer-legal">
+          <a href="#hero">Privacy Policy</a>
+          <a href="#hero">Terms of Use</a>
+          <a href="#hero">Sales Policy</a>
+          <a href="#hero">Legal</a>
+          <a href="#hero">Site Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 10. PRODUCT DETAILS MODAL -->
+  <div id="productModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog product-modal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+      <button id="closeProductModal" class="modal-close-btn" aria-label="Oynani yopish">&times;</button>
+      <div id="productModalBody" class="product-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 11. SHOPPING CART DRAWER -->
+  <div id="cartDrawerBackdrop" class="drawer-backdrop" aria-hidden="true">
+    <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Savatcha">
+      <div class="cart-header">
+        <div>
+          <h3>Shopping Bag</h3>
+          <span id="cartItemCountText" class="cart-subtitle">0 ta mahsulot</span>
+        </div>
+        <button id="closeCartDrawer" class="modal-close-btn" aria-label="Savatchani yopish">&times;</button>
+      </div>
+
+      <div id="cartItemsContainer" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Yetkazib berish</span>
+          <span class="free-badge">Bepul (Express)</span>
+        </div>
+        <div class="cart-summary-row cart-total-row">
+          <span>Jami</span>
+          <strong id="cartTotalPrice">$0</strong>
+        </div>
+        <button id="checkoutBtn" class="btn btn-primary btn-full" disabled>
+          Checkout / Buy Now
+        </button>
+        <button id="clearCartBtn" class="btn btn-ghost btn-full" style="margin-top: 8px;">
+          Savatchani tozalash
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- LOGIN / REGISTER MODAL -->
+  <div id="authModalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+      <button id="closeAuthModal" class="modal-close-btn" aria-label="Oynani yopish">&times;</button>
+      <div id="authModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
